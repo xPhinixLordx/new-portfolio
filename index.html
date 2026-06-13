@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cainan Tracy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c58c994b04.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({publicKey: "9I0pv2byKs6uL2fWS",});
+    })();
+</script>
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="assets/CT_logo.png" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link_hover-effect
+                        link_hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link_hover-effect
+                        link_hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link_hover-effect
+                        link_hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click">
+                    <a href="#" class="
+                        nav__link--anchor
+                    "><i class="fa-solid fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title green">I'm Cainan.</h1>
+                <p class="header__para">
+                    I'm a <b class="green">Frontend Software Engineer</b> with a strong passion for building web application
+                    with great user experiences.
+                    <br>
+                    Here's a bit more <b class="green">about me.</b>
+                </p>
+                <div class="social__list">
+                    <a href="#" class="social__link click">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="social__link click">
+                        <i class="fa-solid fa-file"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <button class="mail__btn click">
+            <i class="fa-solid  fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a 22 year old <b class="green">frontend software engineer</b> with a strong 
+                    passion for developing websites with great <b class="green">user experiences.</b>
+                    <br>
+                    I currently work on extremely difficult engineering problems and learn from a team
+                    consisting of some of the most <b class="green">talented</b> and <b class="green">experienced</b> software engineers every day.
+                </p>
+                <div class="modal__languages">
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/500px-HTML5_Badge.svg.png" class="language_img" alt="">
+                        </figure>
+                        <span class="language_name">HTML</span>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png" class="language_img" alt="">
+                        </figure>
+                        <span class="language_name">CSS</span>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Badge_js-strict_%28cropped%29.png/1280px-Badge_js-strict_%28cropped%29.png?_=20241011112128" class="language_img" alt="">
+                        </figure>
+                        <span class="language_name">JavaScript</span>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png" class="language_img" alt="">
+                        </figure>
+                        <span class="language_name">React</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit"> Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
+            <i class="fa-solid fa-times modal__exit click"></i>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section_title">Here are some of my <span class="green">projects</span></h1>
+                <ul class="project_list">
+                    <li class="project">
+                        <div class="project--wrapper">
+                            <img src="./assets/loopit.png" class="project_img" alt="">
+                            <div class="project_description">
+                                <h3 class="project_description--title">Car sales project</h3>
+                                <h4 class="project_description--sub-title">HTML, CSS, JavaScript</h4>
+                                <p class="project_description--para">
+                                    This is a car sales project that I built using HTML, CSS, and JavaScript. 
+                                    It features a responsive design and allows users to browse through a catalog of cars, 
+                                    view details about each car, and contact the seller for more information.
+                                </p>
+                                <div class="project_description--links">
+                                    <a href="my github" target="_blank" class="project_description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="my website" target="_blank" class="project_description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project--wrapper">
+                            <img src="./assets/loopit.png" class="project_img" alt="">
+                            <div class="project_description">
+                                <h3 class="project_description--title">Car sales project</h3>
+                                <h4 class="project_description--sub-title">HTML, CSS, JavaScript</h4>
+                                <p class="project_description--para">
+                                    This is a car sales project that I built using HTML, CSS, and JavaScript. 
+                                    It features a responsive design and allows users to browse through a catalog of cars, 
+                                    view details about each car, and contact the seller for more information.
+                                </p>
+                                <div class="project_description--links">
+                                    <a href="my github" target="_blank" class="project_description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="my website" target="_blank" class="project_description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project--wrapper">
+                            <img src="./assets/loopit.png" class="project_img" alt="">
+                            <div class="project_description">
+                                <h3 class="project_description--title">Car sales project</h3>
+                                <h4 class="project_description--sub-title">HTML, CSS, JavaScript</h4>
+                                <p class="project_description--para">
+                                    This is a car sales project that I built using HTML, CSS, and JavaScript. 
+                                    It features a responsive design and allows users to browse through a catalog of cars, 
+                                    view details about each car, and contact the seller for more information.
+                                </p>
+                                <div class="project_description--links">
+                                    <a href="my github" target="_blank" class="project_description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="my website" target="_blank" class="project_description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="row footer_row">
+            <a href="#top" class="footer_anchor">
+                <figure class="footer_logo">
+                    <img src="./assets/CT_logo.png" class="footer_logo-img" alt="">
+                </figure>
+                <span class="footer_logo--popper">
+                    Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </span>
+            </a>
+            <div class="footer_social--list">
+                <a href="My github" class="
+                footer_social--link
+                link_hover-effect
+                link_hover-effect--white" target="_blank">Github</a>
+                <a href="My LinkedIn" class="
+                footer_social--link
+                link_hover-effect
+                link_hover-effect--white" target="_blank">LinkedIn</a>
+                <a href="mailto:cainantracy@gmail.com" class="
+                footer_social--link
+                link_hover-effect
+                link_hover-effect--white" target="_blank">Email</a>
+                <a href="./assets/Example Resume.pdf" class="
+                footer_social--link
+                link_hover-effect
+                link_hover-effect--white" target="_blank">Resume</a>
+            </div>
+            <div class="footer_copyright">Copyright © 2026 Cainan Tracy</div>
+        </div>
+    </footer>
+</body>
+</html>
